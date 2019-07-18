@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Data Negara</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list no-line>
+  <ion-item>
+    <ion-label floating>Negara</ion-label>
+    <ion-input id="newNegara" type="text" name="newNegara" #newNegara [(ngModel)]="negara"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Ibu Kota</ion-label>
+    <ion-input id="newIbukota" type="text" name="newIbukota" #newIbukota [(ngModel)]="ibukota"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div>
+  <button ion-button round outline block (click)="Edit()">Edit Data Negara</button>
+</div>
+</ion-content>

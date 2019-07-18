@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Buat Data Negara</ion-title>
+    </ion-toolbar>
+  </ion-header> 
+
+<ion-content padding>
+  <ion-list no-line>
+    <ion-item>
+      <ion-input type="text" placeholder="Tulis nama negara" name="negara" #negara></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Tulis nama ibukota" name="ibukota" #ibukota></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <div>
+    <button ion-button round outline block (click)="Post()">Simpan</button>
+  </div>
+
+</ion-content>

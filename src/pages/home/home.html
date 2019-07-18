@@ -1,14 +1,42 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Nama Nama Negara
     </ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button round outline block (click)="Post()">Buat Data Baru</button>
+  <hr>
+  <ion-row class="header">
+    <ion-col col-4>
+      Negara
+    </ion-col>
+    <ion-col col-4>
+      Ibukota
+    </ion-col>
+    <ion-col col-4>
+      Opsi
+    </ion-col>
+  </ion-row>
+
+  <ion-item *ngFor="let item of items">
+    <ion-row>
+      <ion-col col-4>
+        {{item.negara}}
+      </ion-col>
+      <ion-col col-4>
+        {{item.ibukota}}
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name="create" (click)="editPost(item)"></ion-icon>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name="close" (click)="deletePost(item)"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+  </ion-item>
+
 </ion-content>
